@@ -1,11 +1,12 @@
-﻿using MediatR;
+﻿using BuildingBlocks.CQRS;
+using MediatR;
 
 namespace BuildingBlocks.CQRS
 {
-    public interface IQueryHandler<in TQuery, TResonse>
-        : IRequestHandler<TQuery, TResonse>
-        where TQuery : IQuery<TResonse>
-        where TResonse : notnull
+    public interface IQueryHandler<in TQuery, TResponse>
+        : IRequestHandler<TQuery, TResponse>
+        where TQuery : IQuery<TResponse>
+        where TResponse : notnull
     { 
     
     }
